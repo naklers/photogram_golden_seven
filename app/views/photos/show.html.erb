@@ -1,0 +1,22 @@
+<h1>Photo <%= @id %></h1>
+
+<div>
+  <img src="<%= @photo.source %>" width="500">
+</div>
+<div>
+  <p><%= @photo.caption %></p>
+</div>
+<div>
+  <tr>
+    <td>
+      <a href="http://localhost:3000/photos">Back to list</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= @photo.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_photo/<%= @photo.id %>">Delete</a>
+    </td>
+  </tr>
+</div>
+
