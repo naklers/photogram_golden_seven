@@ -1,0 +1,30 @@
+<h1>List of Photos</h1>
+
+<a href="http://localhost:3000/photos/new">Add a New Photo</a>
+
+<table>
+  <tr>
+    <th>Thumbnail</th>
+    <th>Caption</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <% @list_of_photos.each do |photo| %>
+  <tr>
+    <td>
+      <img src="<%= photo.source %>" width="80">
+    </td>
+    <td>
+      <%= photo.caption %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
